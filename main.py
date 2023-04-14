@@ -17,7 +17,7 @@ while ison:
                 player = 'X'
         else:
                 player = 'O'
-        selection = input(f"{player}, choose a row and column (For example, type 'A1' to choose the position in row A column 1):")
+        selection = input(f"{player}, choose a row letter and column number. For example, type 'A1' to choose the position in row A column 1:")
         selection = selection.upper()
         if selection[0] == 'A':
                 if selection[1] == '1' and row1[2] == ' ':
