@@ -10,6 +10,7 @@ print("Let's play Tic-Tac-Toe!\n"
       "X goes first.")
 
 ison = True
+tie = False
 i = 0
 while ison:
         print(''.join(cols), ''.join(row1), ''.join(row2), ''.join(row3), sep='\n')
@@ -64,7 +65,13 @@ while ison:
                 ison = False
         elif row1[2] == row2[6] == row3[10] == player or row1[10] == row2[6] == row3[2] == player:
                 ison = False
-
+        elif i > 8:
+                tie = True
+                ison = False
 else:
-        print(''.join(cols), ''.join(row1), ''.join(row2), ''.join(row3), sep='\n')
-        print(f'Game Over! {player} wins!')
+        if tie:
+                print(''.join(cols), ''.join(row1), ''.join(row2), ''.join(row3), sep='\n')
+                print("It's a draw!")
+        else:
+                print(''.join(cols), ''.join(row1), ''.join(row2), ''.join(row3), sep='\n')
+                print(f'Game Over! {player} wins!')
